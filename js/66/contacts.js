@@ -55,8 +55,14 @@
           const index=contacts.findIndex(c=>c===newContact)+1;
            contactsTable.deleteRow(index);
            contacts=contacts.filter(c=>c===newContact);
-         
-      });
+
+           if(!contacts.length){
+                const row = contactsTable.insertRow();
+                const cell = row.insertCell();
+                cell.innerText='no contacts loaded';
+                cell.setAttribute('colspan','5');
+      }
+    });
 
   
       /*firstNameInput.value = '';
