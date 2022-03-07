@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="countries">
+      <select id="from"></select>
+      <select id="to"></select>
+    </div>
+
+    <div id="conversion">
+      <button id="convert">convert</button>
+      <h3 id="result">result:</h3>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--script>
+      const appKey = "d5ffba7aa6710a8c5027";
+
+      // $("#airportLocInput").change(() => {
+      fetch(`https://free.currconv.com/api/v7/countries?apiKey=${appKey}`)
+        /*=${$(
+              "#firstCountryInput"
+            ).val()}*/
+
+         .then(async(r) => {
+             const data = await r.json()
+         .then((data) => {
+           console.log(data);
+           populatePage(data.name, data.currencyId);
+        })
+        })
+        .catch((err) => {
+          console.log("in error");
+          console.error(err);
+        });
+      // });
+
+      const populatePage = (name) => {
+        $("#firstCountry").html(name);
+      };
+
+    </script-->
+    <script src="converter.js"></script>
+  </body>
+</html>
